@@ -1,7 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import { createPortal } from 'react-dom';
 import Image from 'next/image';
+import { X } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import Marquee from '@/components/Marquee';
 
@@ -64,6 +66,7 @@ const projects = [
 
 export default function RedFeaturedWorks() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.1 });
+  const [selectedImage, setSelectedImage] = useState<{ image: string; title: string } | null>(null);
 
   return (
     <section id="portfolio" ref={ref} className="relative">
@@ -76,28 +79,30 @@ export default function RedFeaturedWorks() {
           {projects.map((project) => (
             <div
               key={`marquee-${project.id}`}
-              className="flex-shrink-0 w-48 sm:w-64 md:w-80 h-36 sm:h-48 md:h-64 rounded-lg overflow-hidden shadow-lg group"
+              className="flex-shrink-0 w-48 sm:w-64 md:w-80 h-36 sm:h-48 md:h-64 rounded-lg overflow-hidden shadow-lg group cursor-pointer"
+              onClick={() => setSelectedImage({ image: project.image, title: project.title })}
             >
               <Image
                 src={project.image}
                 alt={project.title}
                 width={320}
                 height={256}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
           ))}
           {projects.map((project) => (
             <div
               key={`marquee-dup-${project.id}`}
-              className="flex-shrink-0 w-48 sm:w-64 md:w-80 h-36 sm:h-48 md:h-64 rounded-lg overflow-hidden shadow-lg group"
+              className="flex-shrink-0 w-48 sm:w-64 md:w-80 h-36 sm:h-48 md:h-64 rounded-lg overflow-hidden shadow-lg group cursor-pointer"
+              onClick={() => setSelectedImage({ image: project.image, title: project.title })}
             >
               <Image
                 src={project.image}
                 alt={project.title}
                 width={320}
                 height={256}
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </div>
           ))}
@@ -108,9 +113,8 @@ export default function RedFeaturedWorks() {
       <div className="bg-white py-16 sm:py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2
-            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-12 sm:mb-16 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
           >
             Featured Works
           </h2>
@@ -119,10 +123,10 @@ export default function RedFeaturedWorks() {
             {projects.slice(0, 6).map((project, index) => (
               <div
                 key={project.id}
-                className={`group cursor-pointer transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}
+                className={`group cursor-pointer transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
+                onClick={() => setSelectedImage({ image: project.image, title: project.title })}
               >
                 <div className="relative aspect-[4/5] rounded-lg overflow-hidden bg-gray-100 group-hover:shadow-2xl transition-all duration-500">
                   <Image
@@ -132,7 +136,11 @@ export default function RedFeaturedWorks() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500 flex items-center justify-center">
+                    <span className="bg-white/20 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      View Full Size
+                    </span>
+                  </div>
                 </div>
                 <div className="mt-3 sm:mt-4">
                   <p className="text-xs sm:text-sm text-gray-600 uppercase tracking-wider">
@@ -192,8 +200,9 @@ export default function RedFeaturedWorks() {
             {projects.slice(6).map((project, index) => (
               <div
                 key={project.id}
-                className={`group cursor-pointer transition-all duration-700`}
+                className="group cursor-pointer transition-all duration-700"
                 style={{ transitionDelay: `${index * 100}ms` }}
+                onClick={() => setSelectedImage({ image: project.image, title: project.title })}
               >
                 <div className="relative aspect-[4/5] rounded-lg overflow-hidden bg-gray-100 group-hover:shadow-xl transition-all duration-500">
                   <Image
@@ -203,7 +212,11 @@ export default function RedFeaturedWorks() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-500 flex items-center justify-center">
+                    <span className="bg-white/20 backdrop-blur-md border border-white/20 text-white px-4 py-2 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      View Full Size
+                    </span>
+                  </div>
                 </div>
                 <div className="mt-3 sm:mt-4">
                   <p className="text-xs sm:text-sm text-gray-600 uppercase tracking-wider">
@@ -218,6 +231,42 @@ export default function RedFeaturedWorks() {
           </div>
         </div>
       </div>
+      {/* Lightbox Modal */}
+      {selectedImage && typeof document !== 'undefined' && createPortal(
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-md p-4 animate-in fade-in duration-300"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-6 right-6 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all duration-300 hover:rotate-90 z-10 backdrop-blur-md border border-white/10"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          <div
+            className="relative w-full h-full max-w-7xl max-h-[90vh] animate-in zoom-in-95 duration-500 cursor-zoom-out"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedImage.image}
+              alt={selectedImage.title}
+              fill
+              className="object-contain"
+              sizes="(max-width: 1280px) 100vw, 1280px"
+              priority
+            />
+
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 px-6 py-3 bg-black/60 backdrop-blur-md border border-white/10 rounded-full">
+              <p className="text-white font-bold text-lg whitespace-nowrap">
+                {selectedImage.title}
+              </p>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
     </section>
   );
 }
