@@ -60,9 +60,8 @@ export default function RedAbout() {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Image Section */}
           <div
-            className={`transition-all duration-1000 order-1 lg:order-1 ${
-              isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-            }`}
+            className={`transition-all duration-1000 order-1 lg:order-1 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+              }`}
           >
             <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl group">
               <Image
@@ -80,16 +79,33 @@ export default function RedAbout() {
           <div className="max-w-2xl order-2 lg:order-2">
             {/* Bio */}
             <div
-              className={`mb-12 sm:mb-16 transition-all duration-1000 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-              }`}
+              className={`mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 sm:mb-8">
                 About
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-black/80 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-black/80 leading-relaxed mb-8">
                 Justin B Shajan is a strategic graphic designer focused on creating bold brand visuals and high-converting advertising creatives. With strong typography, structured layouts, and modern aesthetics, he builds visual systems that stand out and perform.
               </p>
+
+              {/* Resume Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="/Justin_Designer_resume.pdf"
+                  download
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#B91C1C] text-white font-bold rounded-sm hover:bg-[#991B1B] transition-all duration-300 hover:scale-105"
+                >
+                  Download Resume 1
+                </a>
+                <a
+                  href="/Justin_Developer_resume.pdf"
+                  download
+                  className="inline-flex items-center justify-center px-8 py-4 bg-[#B91C1C] text-white font-bold rounded-sm hover:bg-[#991B1B] transition-all duration-300 hover:scale-105"
+                >
+                  Download Resume 2
+                </a>
+              </div>
             </div>
 
             {/* Stats */}
@@ -97,9 +113,8 @@ export default function RedAbout() {
               {stats.map((stat, index) => (
                 <div
                   key={stat.label}
-                  className={`text-center transition-all duration-1000 ${
-                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                  }`}
+                  className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                    }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
                   <div className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-1 sm:mb-2">
