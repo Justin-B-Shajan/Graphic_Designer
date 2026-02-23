@@ -20,7 +20,7 @@ export default function RedHero() {
       {/* Top Marquee */}
       <div className="absolute top-16 sm:top-20 left-0 right-0 z-20">
         <Marquee
-          text="✦ GRAPHIC DESIGNER ✦ BRAND IDENTITY ✦ ADVERTISING ✦ VISUAL STORYTELLING ✦"
+          text="✦ GRAPHIC DESIGNER ✦ WEB DEVELOPER ✦ BRAND IDENTITY ✦ ADVERTISING ✦ VISUAL STORYTELLING ✦"
           speed={30}
           direction="left"
           className="text-white/20 text-lg sm:text-xl md:text-2xl lg:text-3xl font-black uppercase tracking-wider"
