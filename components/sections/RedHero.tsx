@@ -11,6 +11,7 @@ export default function RedHero() {
     <section
       id="home"
       ref={ref}
+      aria-label="Hero"
       className="relative min-h-screen flex items-center justify-center bg-[#B91C1C] overflow-hidden"
     >
       {/* Grain texture overlay */}

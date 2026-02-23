@@ -55,7 +55,7 @@ export default function RedAbout() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section id="about" ref={ref} className="relative bg-white py-16 sm:py-24 md:py-32 lg:py-40">
+    <section id="about" ref={ref} aria-label="About Justin B Shajan" className="relative bg-white py-16 sm:py-24 md:py-32 lg:py-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Image Section */}

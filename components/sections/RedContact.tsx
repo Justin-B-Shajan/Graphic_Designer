@@ -48,7 +48,7 @@ export default function RedContact() {
   };
 
   return (
-    <section id="contact" ref={ref} className="relative bg-white py-24 md:py-32 lg:py-40 overflow-hidden">
+    <section id="contact" ref={ref} aria-label="Contact" className="relative bg-white py-24 md:py-32 lg:py-40 overflow-hidden">
       {/* Background Marquee */}
       <div className="absolute top-0 left-0 right-0 py-4">
         <Marquee
@@ -97,6 +97,7 @@ export default function RedContact() {
                   type="text"
                   name="name"
                   placeholder="Your Name"
+                  aria-label="Your Name"
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -110,6 +111,7 @@ export default function RedContact() {
                   type="email"
                   name="email"
                   placeholder="Your Email"
+                  aria-label="Your Email"
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -122,6 +124,7 @@ export default function RedContact() {
                 <textarea
                   name="message"
                   placeholder="Your Message"
+                  aria-label="Your Message"
                   value={formData.message}
                   onChange={handleChange}
                   required

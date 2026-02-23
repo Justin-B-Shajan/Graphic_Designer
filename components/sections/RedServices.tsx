@@ -14,7 +14,7 @@ export default function RedServices() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section id="services" ref={ref} className="relative bg-[#B91C1C] py-24 md:py-32 lg:py-40 overflow-hidden">
+    <section id="services" ref={ref} aria-label="Services" className="relative bg-[#B91C1C] py-24 md:py-32 lg:py-40 overflow-hidden">
       {/* Background Marquee */}
       <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2">
         <Marquee
