@@ -16,7 +16,7 @@ export default function RedServices() {
   return (
     <section id="services" ref={ref} className="relative bg-[#B91C1C] py-24 md:py-32 lg:py-40 overflow-hidden">
       {/* Background Marquee */}
-      <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 hidden sm:block">
+      <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2">
         <Marquee
           text="✦ SERVICES ✦ EXPERTISE ✦ SOLUTIONS ✦"
           speed={40}
@@ -29,9 +29,8 @@ export default function RedServices() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           <h2
-            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-12 sm:mb-16 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-12 sm:mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
           >
             Services
           </h2>
@@ -40,9 +39,8 @@ export default function RedServices() {
             {services.map((service, index) => (
               <div
                 key={service}
-                className={`group transition-all duration-1000 ${
-                  isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
-                }`}
+                className={`group transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'
+                  }`}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="underline-hover">

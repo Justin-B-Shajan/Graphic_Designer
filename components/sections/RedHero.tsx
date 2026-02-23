@@ -17,7 +17,7 @@ export default function RedHero() {
       <div className="absolute inset-0 grain-texture opacity-30" />
 
       {/* Top Marquee */}
-      <div className="absolute top-16 sm:top-20 left-0 right-0 z-20 hidden sm:block">
+      <div className="absolute top-16 sm:top-20 left-0 right-0 z-20">
         <Marquee
           text="✦ GRAPHIC DESIGNER ✦ BRAND IDENTITY ✦ ADVERTISING ✦ VISUAL STORYTELLING ✦"
           speed={30}
@@ -28,7 +28,7 @@ export default function RedHero() {
       </div>
 
       {/* Bottom Marquee */}
-      <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 z-20 hidden sm:block">
+      <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 z-20">
         <Marquee
           text="✦ CREATIVE DIRECTION ✦ PRODUCT DESIGN ✦ SOCIAL MEDIA ✦ UI/UX ✦"
           speed={35}

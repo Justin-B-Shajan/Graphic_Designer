@@ -158,7 +158,7 @@ export default function RedFeaturedWorks() {
 
       {/* Section 2: Red Background - Featured Project */}
       <div className="bg-[#B91C1C] py-16 sm:py-24 md:py-32 relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 py-4 hidden sm:block">
+        <div className="absolute top-0 left-0 right-0 py-4">
           <Marquee
             text="✦ FEATURED PROJECT ✦ PREMIUM DESIGN ✦"
             speed={25}

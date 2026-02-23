@@ -50,7 +50,7 @@ export default function RedContact() {
   return (
     <section id="contact" ref={ref} className="relative bg-white py-24 md:py-32 lg:py-40 overflow-hidden">
       {/* Background Marquee */}
-      <div className="absolute top-0 left-0 right-0 py-4 hidden sm:block">
+      <div className="absolute top-0 left-0 right-0 py-4">
         <Marquee
           text="✦ GET IN TOUCH ✦ LET'S WORK TOGETHER ✦"
           speed={30}
