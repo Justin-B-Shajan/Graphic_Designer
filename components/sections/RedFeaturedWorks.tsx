@@ -22,7 +22,7 @@ const projects = [
     title: 'Shape Your Body',
     category: 'Posters',
     image: '/shape_your_body.png',
-    slug: null,
+    slug: 'shape-your-body',
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const projects = [
     title: 'LunaGlow Night Serum',
     category: 'Branding',
     image: '/Night serum.jpeg',
-    slug: null,
+    slug: 'lunaglow',
   },
   {
     id: 6,
@@ -57,21 +57,21 @@ const projects = [
     title: 'FireBolt',
     category: 'UI Design',
     image: '/watch.png',
-    slug: null,
+    slug: 'firebolt',
   },
   {
     id: 8,
     title: 'Hot Burger Poster',
     category: 'Posters',
     image: '/hot_burger_poster.jpeg',
-    slug: null,
+    slug: 'hot-burger',
   },
   {
     id: 9,
     title: 'Instagram Post',
     category: 'Social Media',
     image: '/Social media post.jpeg',
-    slug: null,
+    slug: 'instagram-creative',
   },
 ];
 
