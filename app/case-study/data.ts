@@ -36,7 +36,7 @@ export const caseStudies: CaseStudyProject[] = [
         overview: {
             type: 'Brand Visual Campaign',
             tools: ['Adobe Photoshop', 'Adobe Illustrator', 'Lightroom'],
-            duration: 'Concept Project — 5 Days',
+            duration: 'Concept Project — 1 Day',
             role: 'Graphic Designer',
         },
         problem: `BMW's M3 Competition is one of the most iconic performance sedans in automotive history. The challenge was to create a brand visual campaign that communicates raw power and German engineering precision — without relying on technical copy. The design needed to speak to enthusiasts and lifestyle buyers alike.`,
@@ -77,7 +77,7 @@ export const caseStudies: CaseStudyProject[] = [
         overview: {
             type: 'Product Brand Identity',
             tools: ['Adobe Photoshop', 'Adobe Illustrator', 'After Effects'],
-            duration: 'Concept Project — 4 Days',
+            duration: 'Concept Project — 1 Day',
             role: 'Brand Designer',
         },
         problem: `Fragrance is an invisible product — you can't see or touch a scent in a visual medium. The design challenge was to communicate the sensory experience of a luxury perfume purely through visual language: colour, texture, form, and light.`,
@@ -118,7 +118,7 @@ export const caseStudies: CaseStudyProject[] = [
         overview: {
             type: 'Mobile UI Concept',
             tools: ['Figma', 'Adobe Photoshop', 'Illustrator'],
-            duration: 'Concept Project — 6 Days',
+            duration: 'Concept Project — 1 Day',
             role: 'UI/UX Designer',
         },
         problem: `Realme's brand is energetic, youthful, and tech-forward — but their default UI design language often felt generic and underdesigned. The opportunity was to create a UI concept that reflects the brand's boldness while remaining clean, usable, and premium.`,
@@ -159,7 +159,7 @@ export const caseStudies: CaseStudyProject[] = [
         overview: {
             type: 'Food & Beverage Branding',
             tools: ['Adobe Illustrator', 'Adobe Photoshop', 'InDesign'],
-            duration: 'Concept Project — 3 Days',
+            duration: 'Concept Project — 1 Day',
             role: 'Brand & Packaging Designer',
         },
         problem: `The FMCG ice cream category is saturated — brands compete on colour, personality, and instant shelf appeal. A new blueberry ice cream product needed a brand identity that stood out from generic supermarket packaging and built an emotional connection with consumers from first glance.`,
