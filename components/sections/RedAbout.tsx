@@ -55,7 +55,7 @@ export default function RedAbout() {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
 
   return (
-    <section id="about" ref={ref} aria-label="About Justin B Shajan" className="relative bg-white py-16 sm:py-24 md:py-32 lg:py-40">
+    <section id="about" ref={ref} className="relative bg-white py-12 sm:py-16 md:py-20" itemScope itemType="http://schema.org/Person">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Image Section */}
@@ -66,10 +66,11 @@ export default function RedAbout() {
             <div className="relative aspect-[3/4] max-w-md mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl group">
               <Image
                 src="/About.png"
-                alt="Justin B Shajan"
+                alt="Justin B Shajan - Best Graphic Designer & Digital Marketer"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                itemProp="image"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
@@ -83,10 +84,10 @@ export default function RedAbout() {
                 }`}
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 sm:mb-8">
-                About
+                About <span itemProp="name">Justin B Shajan</span>
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-black/80 leading-relaxed mb-8">
-                Justin B Shajan is a strategic graphic designer focused on creating bold brand visuals and high-converting advertising creatives. With strong typography, structured layouts, and modern aesthetics, he builds visual systems that stand out and perform.
+              <p className="text-base sm:text-lg md:text-xl text-black/80 leading-relaxed mb-8" itemProp="description">
+                Justin B Shajan is a professional graphic designer, brand strategist, and digital marketer focused on creating bold brand visuals and high-converting advertising creatives. Widely recognized as one of the best graphic designers and digital marketers, he blends strong typography, structured layouts, and modern aesthetics to build high-performance visual systems.
               </p>
 
               {/* Resume Buttons */}

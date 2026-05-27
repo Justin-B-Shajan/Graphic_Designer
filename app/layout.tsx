@@ -1,35 +1,31 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const siteUrl = 'https://justin-b-shajan.netlify.app';
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: 'Justin B Shajan | Graphic Designer & Brand Identity Expert',
-    template: '%s | Justin B Shajan',
-  },
-  description:
-    'Justin B Shajan is a strategic graphic designer specializing in bold brand identities, advertising creatives, and visual systems. Available for freelance projects worldwide.',
+  metadataBase: new URL('https://justinbshajan.com'), // Replace with actual domain when deployed
+  title: 'Justin B Shajan | Best Graphic Designer & Digital Marketer',
+  description: 'Justin B Shajan is a leading graphic designer and digital marketer specializing in high-converting brand identities, stunning posters, social media creatives, and premium UI/UX designs.',
   keywords: [
-    'graphic designer',
-    'brand identity',
-    'advertising design',
-    'visual storytelling',
-    'social media creatives',
-    'UI design',
-    'product design',
+    'best graphic designer',
+    'best digital marketer',
+    'graphic designer India',
+    'digital marketer India',
+    'brand identity designer',
+    'logo designer',
+    'freelance graphic designer',
+    'visual designer India',
+    'top poster designer',
+    'UI designer India',
+    'social media creative designer',
     'Justin B Shajan',
-    'freelance designer',
-    'logo design',
-    'poster design',
+    'justinbshajan'
   ],
-  authors: [{ name: 'Justin B Shajan', url: siteUrl }],
+  authors: [{ name: 'Justin B Shajan', url: 'https://justinbshajan.com' }],
   creator: 'Justin B Shajan',
+  publisher: 'Justin B Shajan',
   robots: {
     index: true,
     follow: true,
@@ -41,76 +37,36 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  alternates: {
-    canonical: siteUrl,
-  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: siteUrl,
-    siteName: 'Justin B Shajan — Graphic Designer',
-    title: 'Justin B Shajan | Graphic Designer & Brand Identity Expert',
-    description:
-      'Strategic graphic designer creating bold brand visuals and high-converting advertising creatives. Strong typography, structured layouts, modern aesthetics.',
+    url: 'https://justinbshajan.com',
+    title: 'Justin B Shajan | Best Graphic Designer & Digital Marketer',
+    description: 'Elevate your brand with award-winning graphic design, brand identity, and high-impact digital marketing campaigns.',
+    siteName: 'Justin B Shajan Portfolio',
     images: [
       {
         url: '/logo.png',
         width: 1200,
         height: 630,
-        alt: 'Justin B Shajan — Graphic Designer',
+        alt: 'Justin B Shajan - Best Graphic Designer & Digital Marketer Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Justin B Shajan | Graphic Designer & Brand Identity Expert',
-    description:
-      'Strategic graphic designer creating bold brand visuals and high-converting advertising creatives.',
-    creator: '@justinbshajan',
-    images: [
-      {
-        url: '/logo.png',
-        alt: 'Justin B Shajan — Graphic Designer',
-      },
-    ],
+    title: 'Justin B Shajan | Best Graphic Designer & Digital Marketer',
+    description: 'Leading brand identity designer and digital marketer crafting visual stories that scale brands.',
+    creator: '@justinbshajan', // Replace if different
+    images: ['/logo.png'],
+  },
+  alternates: {
+    canonical: 'https://justinbshajan.com',
   },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'Person',
-      '@id': `${siteUrl}/#person`,
-      name: 'Justin B Shajan',
-      url: siteUrl,
-      jobTitle: 'Graphic Designer',
-      description:
-        'Strategic graphic designer specializing in brand identity, advertising creatives, and visual systems.',
-      sameAs: [
-        'https://github.com/Justin-B-Shajan',
-        'https://www.linkedin.com/in/justin-b-shajan-b64935235',
-        'https://www.instagram.com/the_nephalem_boy/',
-      ],
-      knowsAbout: [
-        'Brand Identity',
-        'Graphic Design',
-        'Advertising',
-        'UI Design',
-        'Visual Storytelling',
-      ],
-    },
-    {
-      '@type': 'WebSite',
-      '@id': `${siteUrl}/#website`,
-      url: siteUrl,
-      name: 'Justin B Shajan — Graphic Designer',
-      description:
-        'Portfolio of Justin B Shajan, a strategic graphic designer.',
-      author: { '@id': `${siteUrl}/#person` },
-    },
-  ],
-};
+import StructuredData from './structured-data';
+import SeoContent from './seo-content';
 
 export default function RootLayout({
   children,
@@ -118,15 +74,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="author" href="/humans.txt" />
+        <meta name="theme-color" content="#B91C1C" />
+      </head>
       <body className={inter.className}>
+        <StructuredData />
+        <SeoContent />
         {children}
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );

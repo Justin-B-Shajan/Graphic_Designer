@@ -15,7 +15,7 @@ export default function RedMidStatement() {
       <div className="absolute inset-0 grain-texture opacity-20" />
 
       {/* Top Marquee */}
-      <div className="absolute top-0 left-0 right-0 py-4 sm:py-6">
+      <div className="absolute top-0 left-0 right-0 py-4 sm:py-6 z-0">
         <Marquee
           text="✦ ATTENTION ✦ DESIGN ✦ IMPACT ✦ RESULTS ✦"
           speed={30}
@@ -27,8 +27,9 @@ export default function RedMidStatement() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
-          className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+          className={`text-center transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-black text-white leading-tight tracking-tight px-4">
             <span className="block">Attention Is Earned.</span>
@@ -38,7 +39,7 @@ export default function RedMidStatement() {
       </div>
 
       {/* Bottom Marquee */}
-      <div className="absolute bottom-0 left-0 right-0 py-4 sm:py-6">
+      <div className="absolute bottom-0 left-0 right-0 py-4 sm:py-6 z-0">
         <Marquee
           text="✦ CREATIVITY ✦ STRATEGY ✦ EXCELLENCE ✦"
           speed={35}

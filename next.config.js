@@ -5,6 +5,7 @@ const nextConfig = {
   },
   images: {
     formats: ['image/avif', 'image/webp'],
+    unoptimized: process.env.NODE_ENV === 'development',
   },
   swcMinify: true,
 };

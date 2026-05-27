@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Justin B Shajan | Press Kit & Backlink Generator</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0f0f12;
+      color: #ffffff;
+      line-height: 1.6;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #B91C1C;
+      font-weight: 900;
+      border-bottom: 2px solid #B91C1C;
+      padding-bottom: 10px;
+    }
+    h2 {
+      margin-top: 30px;
+      color: #ffffff;
+    }
+    .widget-box {
+      background-color: #1a1a24;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 25px;
+    }
+    .preview {
+      background-color: #0c0c0e;
+      border-radius: 4px;
+      padding: 15px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    textarea {
+      width: 100%;
+      height: 80px;
+      background-color: #0c0c0e;
+      color: #a3a3c2;
+      border: 1px solid #444;
+      font-family: monospace;
+      padding: 10px;
+      box-sizing: border-box;
+      border-radius: 4px;
+      resize: none;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #B91C1C;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      margin-top: 10px;
+      cursor: pointer;
+      border: none;
+    }
+    .btn:hover {
+      background-color: #991b1b;
+    }
+  </style>
+</head>
+<body>
+  <h1>Press Kit & Backlink Widgets</h1>
+  <p>If you're a client, partner, or friend, use the badges below to link back to my portfolio. Adding these onto your website helps my search rankings (backlinks) and shows off our collaboration!</p>
+
+  <h2>1. Standard "Designed By" Text Link</h2>
+  <div class="widget-box">
+    <div class="preview">
+      <span style="color:#888;">Designed by <a href="https://justinbshajan.com" style="color:#B91C1C; text-decoration:none; font-weight:bold;">Justin B Shajan</a></span>
+    </div>
+    <textarea id="code1" readonly><a href="https://justinbshajan.com" target="_blank" rel="noopener" title="Best Graphic Designer & Digital Marketer">Designed by Justin B Shajan</a></textarea>
+    <button class="btn" onclick="copyCode('code1')">Copy Code</button>
+  </div>
+
+  <h2>2. Clean Dark Footer Badge</h2>
+  <div class="widget-box">
+    <div class="preview">
+      <div style="background-color:#111; border:1px solid #B91C1C; padding:8px 16px; border-radius:4px; font-weight:bold; font-size:12px; color:#fff;">
+        ✦ Creative Design by <a href="https://justinbshajan.com" style="color:#B91C1C; text-decoration:none;">Justin B Shajan</a> ✦
+      </div>
+    </div>
+    <textarea id="code2" readonly><div style="display:inline-block; background-color:#111; border:1px solid #B91C1C; padding:8px 16px; border-radius:4px; font-weight:bold; font-size:12px;"><a href="https://justinbshajan.com" target="_blank" rel="noopener" style="color:#fff; text-decoration:none; font-family:sans-serif;">✦ Creative Design by <span style="color:#B91C1C;">Justin B Shajan</span> ✦</a></div></textarea>
+    <button class="btn" onclick="copyCode('code2')">Copy Code</button>
+  </div>
+
+  <h2>3. Marketing & Growth Partner Link</h2>
+  <div class="widget-box">
+    <div class="preview">
+      <span style="color:#fff; font-size:14px;">Growth Partner: <a href="https://justinbshajan.com" style="color:#fff; font-weight:bold; text-decoration:underline;">Justin B Shajan</a></span>
+    </div>
+    <textarea id="code3" readonly><a href="https://justinbshajan.com" target="_blank" rel="noopener" title="Best Digital Marketer" style="color:inherit; font-weight:bold;">Growth Partner: Justin B Shajan</a></textarea>
+    <button class="btn" onclick="copyCode('code3')">Copy Code</button>
+  </div>
+
+  <script>
+    function copyCode(id) {
+      const copyText = document.getElementById(id);
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(copyText.value);
+      alert("Code copied! Thank you for the backlink support.");
+    }
+  </script>
+</body>
+</html>

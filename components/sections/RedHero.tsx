@@ -11,16 +11,16 @@ export default function RedHero() {
     <section
       id="home"
       ref={ref}
-      aria-label="Hero"
       className="relative min-h-screen flex items-center justify-center bg-[#B91C1C] overflow-hidden"
+      aria-label="Justin B Shajan - Best Graphic Designer & Digital Marketer Home Section"
     >
       {/* Grain texture overlay */}
       <div className="absolute inset-0 grain-texture opacity-30" />
 
       {/* Top Marquee */}
-      <div className="absolute top-16 sm:top-20 left-0 right-0 z-20">
+      <div className="absolute top-16 sm:top-20 left-0 right-0 z-0">
         <Marquee
-          text="✦ GRAPHIC DESIGNER ✦ WEB DEVELOPER ✦ BRAND IDENTITY ✦ ADVERTISING ✦ VISUAL STORYTELLING ✦"
+          text="✦ GRAPHIC DESIGNER ✦ BRAND IDENTITY ✦ ADVERTISING ✦ VISUAL STORYTELLING ✦"
           speed={30}
           direction="left"
           className="text-white/20 text-lg sm:text-xl md:text-2xl lg:text-3xl font-black uppercase tracking-wider"
@@ -29,7 +29,7 @@ export default function RedHero() {
       </div>
 
       {/* Bottom Marquee */}
-      <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 z-20">
+      <div className="absolute bottom-16 sm:bottom-20 left-0 right-0 z-0">
         <Marquee
           text="✦ CREATIVE DIRECTION ✦ PRODUCT DESIGN ✦ SOCIAL MEDIA ✦ UI/UX ✦"
           speed={35}
@@ -73,7 +73,7 @@ export default function RedHero() {
                 }`}
               style={{ transitionDelay: '400ms' }}
             >
-              I design powerful brand identities and advertising creatives that demand attention and drive results.
+              As the best graphic designer and digital marketer, I design powerful brand identities and advertising creatives that demand attention and drive results.
             </p>
 
             {/* CTA Buttons */}
@@ -105,7 +105,7 @@ export default function RedHero() {
 
           {/* Right Side - 3D Circular Image Design */}
           <div
-            className={`w-full lg:w-1/2 flex justify-center lg:justify-end transition-all duration-1000 z-10 ${isVisible ? 'translate-x-0' : 'translate-x-10'
+            className={`w-full lg:w-1/2 flex justify-center lg:justify-end transition-all duration-1000 z-10 ${isVisible ? 'translate-x-0 opacity-100 translate-y-0' : 'translate-x-10 opacity-0 translate-y-8'
               }`}
             style={{ transitionDelay: '200ms' }}
           >
@@ -113,18 +113,15 @@ export default function RedHero() {
               {/* Decorative background glow */}
               <div className="absolute inset-0 bg-white/20 rounded-full blur-3xl animate-pulse scale-110" />
 
-              {/* The White Circle Base */}
-              <div className="absolute inset-8 bg-white rounded-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transform transition-transform duration-700 group-hover:scale-105 overflow-hidden">
+              {/* The White Circle Base with Image inside */}
+              <div className="absolute inset-8 bg-white rounded-full shadow-[0_20px_60px_-15px_rgba(0,0,0,0.5)] transform transition-transform duration-700 group-hover:scale-105 overflow-hidden z-20">
                 <div className="absolute inset-0 opacity-10 grain-texture" />
-              </div>
-
-              {/* The "Projecting" Image */}
-              <div className="absolute inset-0 z-20 transform transition-all duration-700 group-hover:-translate-y-8 group-hover:scale-110 drop-shadow-[20px_30px_20px_rgba(0,0,0,0.4)]">
+                {/* Hero Image — cover fills circle, centered on upper body */}
                 <Image
                   src="/heroImg.png"
                   alt="Justin B Shajan"
                   fill
-                  className="object-contain object-bottom"
+                  className="object-cover object-[center_10%]"
                   sizes="(max-width: 768px) 300px, 500px"
                   priority
                 />
